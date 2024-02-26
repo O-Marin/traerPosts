@@ -9,16 +9,19 @@ async function traerPost() {
 
         let getPost = document.querySelector("#getPost");
         console.log(getPost);
-
-
+        
+        let ul = document.createElement('ul');
+        document.querySelector('#post-data').appendChild(ul);
         getPost.addEventListener('click', () => {
             for (let i = 0; i < 5; i++) {
-                document.querySelector('#post-data').innerHTML += `<ul><li>
+                document.querySelector('#post-data ul').innerHTML += `<li>
                         <p id="title">${data[i].title}</p>
                         <p>${data[i].body}</p>
-                        </ul></li>`;
+                        </li>`;
 
             };
+
+            
         });
 
 
